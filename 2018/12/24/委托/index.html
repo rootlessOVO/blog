@@ -4,12 +4,12 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>Hello World | Blog</title>
+    <title>委托、事件、Lambad | Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Li Gen">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="委托声明事件：public delegate int delegateName(string x,int y);声明方法：public static int delegateFunc(string x,int y){ return 1}实例化委托：delegateName delegate1=new">
     
     
     
@@ -65,15 +65,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/11/15/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2018/12/24/委托/" title="委托、事件、Lambad" itemprop="url">委托、事件、Lambad</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="Li Gen">Li Gen</a>
     </p>
   <p class="article-time">
-    <time datetime="2018-11-15T08:33:29.671Z" itemprop="datePublished">2018-11-15</time>
-    Updated:<time datetime="2018-11-15T08:33:29.672Z" itemprop="dateModified">2018-11-15</time>
+    <time datetime="2018-12-24T08:27:01.000Z" itemprop="datePublished">2018-12-24</time>
+    Updated:<time datetime="2018-12-24T08:57:58.150Z" itemprop="dateModified">2018-12-24</time>
     
   </p>
 </header>
@@ -82,28 +82,25 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#委托"><span class="toc-number">1.</span> <span class="toc-text">委托</span></a></li></ol>
 		</div>
 		
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+		<h1 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h1><p>声明事件：<code>public delegate int delegateName(string x,int y);</code><br>声明方法：<code>public static int delegateFunc(string x,int y){ return 1}</code><br>实例化委托：<code>delegateName delegate1=new delegateName(delegateFunc);</code><br>委托调用：<code>delegate1.Invoke()</code></p>
   
 	</div>
 		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/C/">C#</a>
+  </div>
 
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2018/11/15/hello-world/" data-title="Hello World | Blog" data-tsina="" class="share clearfix">
+  <div data-url="http://yoursite.com/2018/12/24/委托/" data-title="委托、事件、Lambad | Blog" data-tsina="" class="share clearfix">
   </div>
 
 </div>
@@ -112,14 +109,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev">
- <a href="/2018/11/15/my-new-post/" title="my new post ">
-  <strong>PREVIOUS:</strong><br>
-  <span>
-  my new post </span>
+
+<div class="next">
+<a href="/2018/11/15/my-new-post/" title="my new post ">
+ <strong>NEXT:</strong><br> 
+ <span>my new post 
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -129,7 +126,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#委托"><span class="toc-number">1.</span> <span class="toc-text">委托</span></a></li></ol>
   </div>
 
 <div id="asidepart">
